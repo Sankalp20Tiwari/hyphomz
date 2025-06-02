@@ -48,7 +48,7 @@ const Footer = () => {
 
 
   return (
-    <footer className="bg-muted/30 border-t border-border">
+    <footer className="bg-muted/30 border-t borde border-border">
       <div className="container mx-auto px-4">
         {/* Newsletter Section */}
         <motion.div
@@ -69,10 +69,10 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
               <Input 
                 placeholder="Enter your email" 
-                className="flex-1"
+                className="flex-1 rounded-2xl "
                 type="email"
               />
-              <Button className="w-full sm:w-auto bg-gradient-to-r from-brand-500 to-purple-600 hover:from-brand-600 hover:to-purple-700 text-white">
+              <Button className="w-full rounded-2xl px-5 sm:w-auto bg-gradient-to-r from-brand-500 to-purple-600 hover:from-brand-600 hover:to-purple-700 text-white">
                 Subscribe
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
