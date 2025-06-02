@@ -59,7 +59,6 @@ const Features = () => {
 
   return (
     <section className="relative py-24 overflow-hidden bg-background">
-      <div className="absolute inset-0 z-0 bg-[url('/grid.svg')] bg-cover opacity-10" />
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
