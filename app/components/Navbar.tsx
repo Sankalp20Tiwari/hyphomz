@@ -52,7 +52,7 @@ const Navbar = () => {
             >
               H
             </motion.div>
-            <span className="text-2xl font-bold  font-display text-brand-400">
+            <span className="text-2xl font-bold font-display">
               Hyphomz
             </span>
           </Link>
