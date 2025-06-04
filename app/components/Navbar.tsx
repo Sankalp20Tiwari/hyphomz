@@ -38,7 +38,7 @@ const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background/80 backdrop-blur-xl border-b  border-brand-700 shadow-lg"
+          ? "bg-background/80 backdrop-blur-xl  shadow-lg"
           : "bg-transparent"
       )}
     >
@@ -52,7 +52,7 @@ const Navbar = () => {
             >
               H
             </motion.div>
-            <span className="text-2xl font-bold text-gradient font-display">
+            <span className="text-2xl font-bold  font-display text-brand-400">
               Hyphomz
             </span>
           </Link>
@@ -66,7 +66,7 @@ const Navbar = () => {
                 className={cn(
                   "relative px-4 py-2 rounded-lg transition-all duration-300 group text-[16px] font-medium ",
                   pathname === item.href
-                    ? "text-brand-600 "
+                    ? "text-brand-400 "
                     : "text-foreground/70 hover:text-foreground hover:bg-muted/50"
                 )}
               >
@@ -171,7 +171,7 @@ const Navbar = () => {
 
                 <div className="flex flex-col space-y-3 pt-4 border-t border-border">
                   <Link href="/login" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Button className="font-medium w-full bg-gradient-to-tr from-purple-600 to-brand-500 hover:from-brand-600 hover:to-purple-600 rounded-2xl">
+                    <Button className="font-medium w-full bg-gradient-to-tr from-purple-600 to-brand-500 hover:from-brand-600 hover:to-purple-600 text-white rounded-2xl">
                       Sign In
                     </Button>
                   </Link>
