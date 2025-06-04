@@ -101,7 +101,7 @@ const Hero = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold font-display mb-6 "
           >
             <span className="block text-foreground">Simplifying</span>
-            <span className="block text-gradient bg-gradient-to-r from-brand-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="block text-6xl p-1 text-gradient bg-gradient-to-r from-brand-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
               Everyday Life
             </span>
           </motion.h1>
