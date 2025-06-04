@@ -266,8 +266,8 @@ const Services = () => {
                           alt={service.title}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                         />
-                        <div className="absolute top-3 right-3 rounded-full bg-white/80 backdrop-blur-md p-1 shadow-lg">
-                          <Badge className=" text-brand-600 font-semibold text-[16px]">
+                        <div className="absolute top-3 right-3 p-1 ">
+                          <Badge className="font-semibold text-[16px] backdrop-blur-md shadow-lg text-white">
                             ${service.price}
                           </Badge>
                         </div>
