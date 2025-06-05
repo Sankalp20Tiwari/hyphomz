@@ -89,7 +89,7 @@ const Hero = () => {
             variants={itemVariants}
             className="inline-flex items-center space-x-2  dark:bg-brand-950/50 border border-brand-200 dark:border-brand-800 rounded-full px-6 py-2 mb-8"
           >
-            <Star className="h-4 w-4 text-brand-500 fill-current" />
+            <Star className="h-4 w-4 text-brand-500 fill-current animate-pulse" />
             <span className="text-sm font-medium text-brand-700 dark:text-brand-300">
               #1 Home Services Platform
             </span>
@@ -101,7 +101,7 @@ const Hero = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold font-display mb-6 "
           >
             <span className="block text-foreground">Simplifying</span>
-            <span className="block text-6xl p-1 text-gradient bg-gradient-to-r from-brand-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="block text-6xl p-2 text-gradient bg-gradient-to-r from-brand-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
               Everyday Life
             </span>
           </motion.h1>
