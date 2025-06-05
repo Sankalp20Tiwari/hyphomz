@@ -15,7 +15,7 @@ const Testimonials = () => {
         </>
       ),
       rating: 5,
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      image: "https://i.pravatar.cc/150?img=32",
     },
     {
       name: "Michael Chen",
@@ -26,7 +26,7 @@ const Testimonials = () => {
         </>
       ),
       rating: 5,
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      image: "https://i.pravatar.cc/150?img=12",
     },
     {
       name: "Emily Rodriguez",
@@ -37,7 +37,7 @@ const Testimonials = () => {
         </>
       ),
       rating: 5,
-      image: "https://randomuser.me/api/portraits/women/68.jpg",
+      image: "https://i.pravatar.cc/150?img=16",
     },
     {
       name: "David Park",
@@ -48,7 +48,7 @@ const Testimonials = () => {
         </>
       ),
       rating: 5,
-      image: "https://randomuser.me/api/portraits/men/71.jpg",
+      image: "https://i.pravatar.cc/150?img=13",
     },
     {
       name: "Lisa Thompson",
@@ -59,7 +59,7 @@ const Testimonials = () => {
         </>
       ),
       rating: 5,
-      image: "https://randomuser.me/api/portraits/women/19.jpg",
+      image: "https://i.pravatar.cc/150?img=26",
     },
     {
       name: "Robert Wilson",
@@ -70,7 +70,7 @@ const Testimonials = () => {
         </>
       ),
       rating: 5,
-      image: "https://randomuser.me/api/portraits/men/53.jpg",
+      image: "https://i.pravatar.cc/150?img=17",
     },
   ];
 
