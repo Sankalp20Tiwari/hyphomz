@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Clock,
   Shield,
@@ -79,7 +78,7 @@ const Features = () => {
             Built for <span className="text-gradient">Excellence</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We've reimagined home services to be more reliable, transparent, and convenient.
+            We&apos;ve reimagined home services to be more reliable, transparent, and convenient.
             Experience the difference with every booking.
           </p>
         </motion.div>

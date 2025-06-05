@@ -15,8 +15,6 @@ import {
   Phone,
   Eye,
   EyeOff,
-  Facebook,
-  Chrome,
   CheckCircle,
   Zap,
   Clock,
@@ -131,7 +129,9 @@ const Signup = () => {
               <div className="flex items-center justify-center space-x-4">
                 <div className="flex -space-x-2">
                 {[1, 2, 3, 4, 5].map((i) => (
-                    <img
+                    <Image
+                    width={32}
+                    height={32}
                     key={i}
                     src={`https://i.pravatar.cc/150?img=${i + 10}`} // random image between 11–15
                     alt={`User ${i}`}

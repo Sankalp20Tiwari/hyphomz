@@ -9,7 +9,6 @@ import {
   Shield, 
   Star,
   CheckCircle,
-  Quote,
   ArrowRight,
   Contact
 } from "lucide-react";
@@ -17,6 +16,7 @@ import Link from "next/link";
 import { PageTransition } from "../components/PageTransition";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Image from "next/image";
 
 const About = () => {
   const stats = [
@@ -109,8 +109,8 @@ const team = [
                 About <span className="text-gradient">Hyphomz</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                We're revolutionizing home services by connecting homeowners with trusted, 
-                professional service providers at the tap of a button. Since 2020, we've been 
+                We&apos;re revolutionizing home services by connecting homeowners with trusted, 
+                professional service providers at the tap of a button. Since 2020, we&apos;ve been 
                 making home maintenance simple, reliable, and stress-free.
               </p>
               <div className="flex items-center justify-center space-x-4">
@@ -166,19 +166,21 @@ const team = [
                 <h2 className="text-4xl font-bold font-display mb-6">Our Story</h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                   Hyphomz was born from a simple frustration: finding reliable home service 
-                  providers shouldn't be a hassle. Our founders experienced firsthand the 
+                  providers shouldn&apos;t be a hassle. Our founders experienced firsthand the 
                   challenges of coordinating repairs, installations, and maintenance tasks.
                 </p>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                   We set out to create a platform that would connect homeowners with 
                   pre-screened, professional service providers who could deliver quality 
-                  work on time, every time. Today, we're proud to serve thousands of 
+                  work on time, every time. Today, we&apos;re proud to serve thousands of 
                   customers across major cities.
                 </p>
                 <div className="flex items-center space-x-4">
                   <div className="flex -space-x-2">
                 {[1, 2, 3, 4, 5].map((i) => (
-                    <img
+                    <Image
+                    width={40}
+                    height={40}
                     key={i}
                     src={`https://i.pravatar.cc/150?img=${i + 10}`} // random image between 11–15
                     alt={`User ${i}`}
@@ -295,7 +297,9 @@ const team = [
         >
           <div className="group rounded-3xl overflow-hidden shadow-xl bg-white dark:bg-zinc-900 transition hover:-translate-y-1 hover:shadow-2xl">
             <div className="h-72 w-full overflow-hidden">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src={member.image}
                 alt={member.name}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -309,7 +313,7 @@ const team = [
                 {member.role}
               </p>
               <blockquote className="text-sm text-muted-foreground italic border-l-4 border-brand-500 pl-4">
-                "{member.quote}"
+                &quot;{member.quote}&quot;
               </blockquote>
             </div>
           </div>

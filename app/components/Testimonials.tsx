@@ -11,7 +11,7 @@ const Testimonials = () => {
       content: (
         <>
           Absolutely <span className="text-brand-400 font-semibold">incredible</span> service! The plumber arrived on time,
-          fixed our issue quickly, and was extremely professional. I'll definitely use Hyphomz again.
+          fixed our issue quickly, and was extremely professional. I&apos;ll definitely use Hyphomz again.
         </>
       ),
       rating: 5,
