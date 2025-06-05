@@ -9,8 +9,13 @@ import {
   ArrowRight
 } from "lucide-react";
 import Image from "next/image";
+import { toast } from "sonner";
+import { useState } from "react";
+
 
 const Footer = () => {
+
+  const [email, setEmail] = useState("");
   const footerLinks = {
     Services: [
       "Handyman Services",
@@ -46,6 +51,23 @@ const Footer = () => {
     ]
   };
 
+  
+
+const handleSubscribe = () => {
+  const isValidEmail = /\S+@\S+\.\S+/.test(email);
+  if (!email.trim()) {
+    toast.error("Please enter your email.");
+    return;
+  }
+  if (!isValidEmail) {
+    toast.error("Please enter a valid email address.");
+    return;
+  }
+
+  toast.success("Subscribed successfully! 🎉 You'll receive our latest updates soon.");
+  setEmail(""); 
+};
+
 
   return (
     <footer className="bg-muted/30 border-t borde border-border">
@@ -71,8 +93,12 @@ const Footer = () => {
                 placeholder="Enter your email" 
                 className="flex-1 rounded-2xl "
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
-              <Button className="w-full rounded-2xl px-5 sm:w-auto bg-gradient-to-r from-brand-500 to-purple-600 hover:from-brand-600 hover:to-purple-700 text-white">
+              <Button    
+               onClick={handleSubscribe} 
+               className="w-full rounded-2xl px-5 sm:w-auto bg-gradient-to-r from-brand-500 to-purple-600 hover:from-brand-600 hover:to-purple-700 text-white">
                 Subscribe
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
