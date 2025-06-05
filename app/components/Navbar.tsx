@@ -171,7 +171,7 @@ const Navbar = () => {
 
                 <div className="flex flex-col space-y-3 pt-4 border-t border-border">
                   <Link href="/login" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Button className="font-medium w-full bg-gradient-to-tr from-purple-600 to-brand-500 hover:from-brand-600 hover:to-purple-600 text-white rounded-2xl">
+                    <Button className="font-medium w-full bg-gradient-to-tr from-purple-600 to-brand-500 hover:from-brand-600 hover:to-purple-600 text-white rounded-xl">
                       Sign In
                     </Button>
                   </Link>

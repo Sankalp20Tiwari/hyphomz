@@ -48,7 +48,7 @@ const CTA = () => {
             </span>
           </h2>
 
-          <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto text-gray-50">
+          <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto text-white">
             Join thousands of satisfied customers who trust Hyphomz for their home service needs.
             Book your first service today and experience the difference.
           </p>
@@ -80,7 +80,7 @@ const CTA = () => {
               <Button
                 variant="ghost"
                 size="lg"
-                className="w-full text-gray-50 sm:w-auto px-10 py-4 text-lg font-semibold border-2 hover:bg-muted/50 transition-all duration-300 border-none"
+                className="w-full text-gray-50 sm:w-auto px-10 py-4 text-lg"
               >
                 Learn More
               </Button>
