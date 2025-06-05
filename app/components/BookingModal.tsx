@@ -21,11 +21,25 @@ import {
   Star
 } from "lucide-react";
 import { toast } from "sonner";
+import Image from "next/image";
+
+interface Service {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  price: number;
+  duration: string;
+  rating: number;
+  reviews: number;
+  image: string;
+  features: string[];
+}
 
 interface BookingModalProps {
   isOpen: boolean;
   onClose: () => void;
-  service: any;
+  service: Service | null;
 }
 
 export const BookingModal = ({ isOpen, onClose, service }: BookingModalProps) => {
@@ -257,7 +271,9 @@ export const BookingModal = ({ isOpen, onClose, service }: BookingModalProps) =>
 
             <div className="bg-muted/50 rounded-lg p-6 space-y-4">
               <div className="flex items-center space-x-4">
-                <img 
+                <Image
+                  width={64}
+                  height={64}
                   src={service.image} 
                   alt={service.title}
                   className="w-16 h-16 rounded-lg object-cover"

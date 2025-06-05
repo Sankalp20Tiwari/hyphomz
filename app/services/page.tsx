@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -26,11 +26,25 @@ import {
   ArrowLeft
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+
+interface Service {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  price: number;
+  duration: string;
+  rating: number;
+  reviews: number;
+  image: string;
+  features: string[];
+}
 
 const Services = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedService, setSelectedService] = useState(null);
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   const categories = [
@@ -151,7 +165,7 @@ const Services = () => {
     return matchesCategory && matchesSearch;
   });
 
-  const handleBookService = (service: any) => {
+  const handleBookService = (service: Service) => {
     setSelectedService(service);
     setIsBookingModalOpen(true);
   };
@@ -261,7 +275,9 @@ const Services = () => {
                   >
                     <Card className="h-full hover:shadow-xl transition-all duration-300 bg-background border-border/50 overflow-hidden group border-none">
                       <div className="relative aspect-video overflow-hidden">
-                        <img 
+                        <Image
+                          width={400}
+                          height={400} 
                           src={service.image} 
                           alt={service.title}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
