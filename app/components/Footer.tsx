@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import { toast } from "sonner";
 import { useState } from "react";
+import { useTheme } from 'next-themes';
 
 
 const Footer = () => {
@@ -51,7 +52,8 @@ const Footer = () => {
     ]
   };
 
-  
+   const { theme, systemTheme } = useTheme();
+   const currentTheme = theme === 'system' ? systemTheme : theme;
 
 const handleSubscribe = () => {
   const isValidEmail = /\S+@\S+\.\S+/.test(email);
@@ -187,21 +189,20 @@ const handleSubscribe = () => {
               © 2025 Hyphomz. All rights reserved. Built with ❤️ for better homes.
             </div>
             
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 md:space-x-6 ">
                   {['x', 'facebook', 'instagram', 'youtube'].map((social, index) => (
                           <a 
                             key={index} 
                             href={`https://${social}.com/hyphomz`} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors duration-300"
                           >
                             <Image
                               width={24}
                               height={24}
                               src={`https://simpleicons.org/icons/${social}.svg`} 
                               alt={social} 
-                              className="h-5 w-5 invert" 
+                              className={`h-6 w-6 ${currentTheme === 'dark' ? 'filter invert' : ''}`} 
                             />
                           </a>
                         ))}
