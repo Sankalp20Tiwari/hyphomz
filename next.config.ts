@@ -18,10 +18,22 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "hyphomz.com",
+        hostname: "i.pravatar.cc",
         port: "",
         pathname: "/**",
-      }
+      },
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "5.imimg.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
