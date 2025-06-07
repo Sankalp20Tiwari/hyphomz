@@ -15,14 +15,11 @@ import {
   Phone,
   Eye,
   EyeOff,
-  CheckCircle,
-  Zap,
-  Clock,
-  Award
 } from "lucide-react";
 import { toast } from "sonner";
 import { PageTransition } from "@/app/components/PageTransition";
 import Image from "next/image";
+import { benefits } from "@/data/signup";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -57,12 +54,7 @@ const Signup = () => {
     toast.success(`Signing up with ${provider}...`);
   };
 
-  const benefits = [
-    { icon: Zap, text: "Instant booking with verified professionals" },
-    { icon: Clock, text: "Same-day service availability" },
-    { icon: Award, text: "Exclusive member discounts" },
-    { icon: CheckCircle, text: "100% satisfaction guarantee" }
-  ];
+
 
   return (
     <PageTransition>

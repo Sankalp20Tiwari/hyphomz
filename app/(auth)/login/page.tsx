@@ -13,14 +13,11 @@ import {
   Lock, 
   Eye,
   EyeOff,
-  CheckCircle,
-  Star,
-  Users,
-  Shield
 } from "lucide-react";
 import { toast } from "sonner";
 import { PageTransition } from "@/app/components/PageTransition";
 import Image from "next/image";
+import { loginFeatures } from "@/data/login";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -39,12 +36,7 @@ const Login = () => {
     toast.success(`Signing in with ${provider}...`);
   };
 
-  const features = [
-    { icon: CheckCircle, text: "Access to 100+ verified professionals" },
-    { icon: Star, text: "Priority booking and exclusive discounts" },
-    { icon: Shield, text: "100% satisfaction guarantee" },
-    { icon: Users, text: "24/7 customer support" }
-  ];
+
 
   return (
     <PageTransition>
@@ -84,7 +76,7 @@ const Login = () => {
               </p>
 
               <div className="space-y-6">
-                {features.map((feature, index) => (
+                {loginFeatures.map((feature, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -30 }}

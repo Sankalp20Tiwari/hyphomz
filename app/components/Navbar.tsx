@@ -6,8 +6,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Menu, X, Home, Settings, User, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { navItems } from "@/data/navItems";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,12 +24,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { href: "/", label: "Home", icon: Home },
-    { href: "/services", label: "Services", icon: Settings },
-    { href: "/about", label: "About", icon: User },
-    { href: "/contact", label: "Contact", icon: Phone },
-  ];
+
 
   return (
     <motion.nav
