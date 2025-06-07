@@ -1,3 +1,4 @@
+'use client'
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -11,49 +12,13 @@ import {
 import Image from "next/image";
 import { toast } from "sonner";
 import { useState } from "react";
-import { useTheme } from 'next-themes';
+import { footerLinks } from "@/data/footer";
 
 
 const Footer = () => {
 
   const [email, setEmail] = useState("");
-  const footerLinks = {
-    Services: [
-      "Handyman Services",
-      "Electrical Work",
-      "Plumbing",
-      "Painting & Decor",
-      "HVAC Services",
-      "Home Renovation"
-    ],
-    Company: [
-      "About Us",
-      "How It Works",
-      "Careers",
-      "Press",
-      "Blog",
-      "Partner With Us"
-    ],
-    Support: [
-      "Help Center",
-      "Contact Us",
-      "Service Areas",
-      "Pricing",
-      "Safety",
-      "Terms of Service"
-    ],
-    Legal: [
-      "Privacy Policy",
-      "Terms & Conditions",
-      "Cookie Policy",
-      "Accessibility",
-      "Licenses",
-      "Insurance"
-    ]
-  };
 
-   const { theme, systemTheme } = useTheme();
-   const currentTheme = theme === 'system' ? systemTheme : theme;
 
 const handleSubscribe = () => {
   const isValidEmail = /\S+@\S+\.\S+/.test(email);
@@ -198,11 +163,11 @@ const handleSubscribe = () => {
                             rel="noopener noreferrer"
                           >
                             <Image
-                              width={24}
-                              height={24}
+                              width={30}
+                              height={30}
                               src={`https://simpleicons.org/icons/${social}.svg`} 
                               alt={social} 
-                              className={`h-6 w-6 ${currentTheme === 'dark' ? 'filter invert' : ''}`} 
+                              className={`h-8 w-8 bg-black-400 rounded-2xl p-1 dark:bg-white`} 
                             />
                           </a>
                         ))}
