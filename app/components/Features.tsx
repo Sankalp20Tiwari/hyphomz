@@ -50,7 +50,7 @@ const Features = () => {
             >
               <div className="bg-background/90 rounded-3xl p-8 h-full">
                 <div
-                  className={`w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center shadow-xl`}
+                  className={`w-16 h-16 mb-6 rounded-2xl ${feature.color} flex items-center justify-center shadow-xl`}
                 >
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
