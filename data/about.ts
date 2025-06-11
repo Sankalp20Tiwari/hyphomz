@@ -1,4 +1,4 @@
-import { Award, CheckCircle, Clock, Shield, Star, Users } from "lucide-react";
+import { Award, CheckCircle,  Shield, Star,  } from "lucide-react";
 
 export const values = [
     {
@@ -65,8 +65,8 @@ export const values = [
 
 
 export const aboutStats = [
-    { number: "50,000+", label: "Happy Customers", icon: Users },
-    { number: "10,000+", label: "Services Completed", icon: Award },
-    { number: "24/7", label: "Customer Support", icon: Clock },
-    { number: "100%", label: "Satisfaction Guarantee", icon: Shield }
+    { number: "50,000+", label: "Happy Customers", image: "/happy-face.png" },
+    { number: "10,000+", label: "Services Completed", image: "/process.png" },
+    { number: "24/7", label: "Customer Support", image: "/help-desk.png" },
+    { number: "100%", label: "Satisfaction Guarantee", image: "/satisfaction.png" },
   ];
