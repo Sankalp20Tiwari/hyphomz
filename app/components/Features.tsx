@@ -2,8 +2,8 @@ import { features } from "@/data/features";
 import { motion } from "framer-motion";
 import {
   Zap,
-  Heart,
 } from "lucide-react";
+import Image from "next/image";
 
 
 const Features = () => {
@@ -45,14 +45,20 @@ const Features = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               whileHover={{ scale: 1.02 }}
-              className="group relative p-1 rounded-3xl bg-gradient-to-br from-muted/40 to-muted/20 hover:shadow-2xl backdrop-blur-xl shadow-lg
+              className="group relative  rounded-3xl bg-gradient-to-br from-muted/40 to-muted/20 hover:shadow-2xl backdrop-blur-xl shadow-lg
               "
             >
               <div className="bg-background/90 rounded-3xl p-8 h-full">
                 <div
-                  className={`w-16 h-16 mb-6 rounded-2xl ${feature.color} flex items-center justify-center shadow-xl`}
+                  className={`w-20 h-20 mb-6  rounded-lg  flex items-center justify-center `}
                 >
-                  <feature.icon className="h-8 w-8 text-white" />
+                  <Image
+                    src={feature.image}
+                    alt={feature.title}
+                    width={100}
+                    height={100}
+                    className="object-contain w-16"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-brand-600">
                   {feature.title}
@@ -73,13 +79,18 @@ const Features = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-24 text-center"
         >
-          <div className=" rounded-3xl p-8 md:p-12 shadow-2xl">
+          <div className=" rounded-3xl p-8 md:p-12 ">
             <div className="flex items-center justify-center mb-6">
-              <Heart className="h-8 w-8 text-red-500 mr-3" />
+              <span className="text-4xl">
+                ❤️
+              </span>
               <span className="text-2xl font-semibold">Loved by thousands</span>
             </div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Join over 50,000 satisfied customers who trust Hyphomz for their home service needs.
+              Join over{' '} 
+              <span className="font-extrabold text-brand-600 ">
+                50,000 satisfied customers
+              </span> who trust Hyphomz for their home service needs.
               Our commitment to excellence has made us the leading platform in the industry.
             </p>
           </div>
