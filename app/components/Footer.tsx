@@ -12,7 +12,7 @@ import {
 import Image from "next/image";
 import { toast } from "sonner";
 import { useState } from "react";
-import { footerLinks } from "@/data/footer";
+import { footerLinks, socialLinks } from "@/data/footer";
 
 
 const Footer = () => {
@@ -85,9 +85,13 @@ const handleSubscribe = () => {
               className="lg:col-span-2"
             >
               <Link href="/" className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-r from-brand-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">
-                  H
-                </div>
+                  <Image 
+                    src="/home.png"
+                    alt="Hyphomz Logo"
+                    width={40}
+                    height={40}
+                    className="object-cover rounded-lg"
+                  />
                 <span className="text-2xl font-bold text-gradient font-display">
                   Hyphomz
                 </span>
@@ -155,7 +159,7 @@ const handleSubscribe = () => {
             </div>
             
             <div className="flex items-center space-x-4 md:space-x-6 ">
-                  {['x', 'facebook', 'instagram', 'youtube'].map((social, index) => (
+                  {socialLinks.map((social, index) => (
                           <a 
                             key={index} 
                             href={`https://${social}.com/hyphomz`} 
@@ -165,9 +169,9 @@ const handleSubscribe = () => {
                             <Image
                               width={30}
                               height={30}
-                              src={`https://simpleicons.org/icons/${social}.svg`} 
-                              alt={social} 
-                              className={`h-8 w-8 bg-black-400 rounded-2xl p-1 dark:bg-white`} 
+                              src={social.image} 
+                              alt={social.social} 
+                              className={`h-8 w-8`} 
                             />
                           </a>
                         ))}
