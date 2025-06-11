@@ -1,26 +1,29 @@
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
 
 export const contactInfo = [
     {
-      icon: Mail,
+
+      image: "/email.png",
       title: "Email Us",
       details: "hello@hyphomz.com",
       subtitle: "We'll respond within 24 hours",
     },
     {
-      icon: Phone,
+
+      image: "/contact.png",
       title: "Call Us",
       details: "1-800-HYPHOMZ",
       subtitle: "Available 24/7 for emergencies",
     },
     {
-      icon: MapPin,
+
+      image: "/repair-shop.png",
       title: "Service Areas",
       details: "100+ Cities",
       subtitle: "Expanding nationwide",
     },
     {
-      icon: Clock,
+
+      image: "/working-hours.png",
       title: "Business Hours",
       details: "Mon-Fri: 7AM-9PM",
       subtitle: "Sat-Sun: 8AM-6PM",

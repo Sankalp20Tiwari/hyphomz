@@ -25,6 +25,7 @@ import { PageTransition } from "../components/PageTransition";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { contactInfo, faqData } from "@/data/contact";
+import Image from "next/image";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -63,7 +64,7 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-4xl mx-auto text-center"
+              className="max-w-2xl mx-auto text-center bg-transparent backdrop-blur-sm "
             >
               <Link
                 href="/"
@@ -93,10 +94,10 @@ const Contact = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Card className="text-center hover:shadow-xl transition-shadow border-none">
+                  <Card className="text-center hover:shadow-2xl transition-shadow border-none shadow-lg">
                     <CardContent className="p-6">
                       <div className="w-16 h-16 bg-brand-400 text-white rounded-full flex items-center justify-center mx-auto mb-4">
-                        <info.icon className="h-8 w-8" />
+                         <Image src={info.image} alt={info.title} width={50} height={50} />
                       </div>
                       <h3 className="text-lg font-semibold mb-2">{info.title}</h3>
                       <p className="text-brand-600 font-medium mb-1">{info.details}</p>
