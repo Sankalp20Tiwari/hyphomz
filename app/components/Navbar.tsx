@@ -9,6 +9,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { navItems } from "@/data/navItems";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,10 +44,16 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <motion.div
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              className="w-10 h-10 bg-gradient-to-r from-brand-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
+              whileHover={{ scale: 1.1 }}
+              className="w-10 h-10  flex items-center justify-center text-white font-bold text-xl"
             >
-              H
+              <Image 
+                src="/home.png"
+                alt="Hyphomz Logo"
+                width={40}
+                height={40}
+                className="object-cover rounded-lg"
+              />
             </motion.div>
             <span className="text-2xl font-bold font-display">
               Hyphomz
