@@ -56,7 +56,7 @@ const About = () => {
         </section>
 
         {/* Stats Section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 ">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {aboutStats.map((stat, index) => (
@@ -68,8 +68,8 @@ const About = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-brand-500 to-purple-600 rounded-xl flex items-center justify-center text-white mx-auto mb-4">
-                    <stat.icon className="h-8 w-8" />
+                  <div className="w-26 h-26  flex items-center justify-center text-white mx-auto mb-4">
+                    <Image src={stat.image} alt={stat.label} width={40} height={40} className="size-12"/>
                   </div>
                   <div className="text-3xl font-bold text-gradient mb-2">{stat.number}</div>
                   <div className="text-muted-foreground">{stat.label}</div>
@@ -133,10 +133,14 @@ const About = () => {
                     backgroundImage: `linear-gradient(rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.5)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80')`,
                     }}
                 >
-                    <div className="text-center">
-                    <div className="w-24 h-24 bg-gradient-to-r from-brand-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-4xl font-bold mx-auto mb-4">
-                        H
-                    </div>
+                    <div className="items-center justify-center flex flex-col">
+                      <Image 
+                        width={100}
+                        height={100}
+                        src="/home.png"
+                        alt="Logo"
+                        className="w-16 h-16 rounded-full object-cover mb-4"
+                        />
                     <h3 className="text-2xl font-bold font-display text-white">Hyphomz</h3>
                     <p className="text-sm text-white/70">Simplifying home services</p>
                     </div>
