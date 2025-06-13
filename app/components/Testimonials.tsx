@@ -66,7 +66,7 @@ const Testimonials = () => {
                     />
                     <div>
                       <p className="font-semibold">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-muted-foreground text-gradient">
                         {testimonial.role}
                       </p>
                     </div>
